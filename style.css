@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+background-clip: content-box;
+  text-align: center;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: rgb(253, 197, 123);
+  margin-top: 10%;
+}
