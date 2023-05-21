@@ -32,8 +32,8 @@ printf('<option value="%d">%d год</option>', $i, $i);
 ?>
 </select></div>
 <div class = "gender"><label>Ваш пол:</label>
-<label>Мужской</label><input type="radio" checked="checked" name="gender" value="0"/>
-<label>Женский</label><input type="radio" name="gender" value="1" />
+<label>Мужской</label><input type="radio" checked="checked" name="gender" value="M"/>
+<label>Женский</label><input type="radio" name="gender" value="F" />
 </div>
 
 <div class = "limbs"><label>Количество ваших конечностей:</label>

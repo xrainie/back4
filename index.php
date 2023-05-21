@@ -136,11 +136,11 @@ $db = new PDO('mysql:host=localhost;dbname=u53712', $user, $pass, [PDO::ATTR_PER
 try {
   $stmt = $db->prepare("INSERT INTO application SET name = ?, email = ?, year = ?, gender = ?, limb = ?, biography = ?");
   $stmt -> execute([$_POST['fio'], $_POST['email'], $_POST['year'], $_POST['gender'],$_POST['limbs'], $_POST['biography']]);
-  $application_id = $db->lastInsertId();
+  $id = $db->lastInsertId();
   
   $application_ability = $db->prepare("INSERT INTO abilities SET id = ?, ability_id = ?");
   foreach($_POST["abilities"] as $ability){
-  $application_ability -> execute([$application_id, $ability]);
+  $application_ability -> execute([$id, $ability]);
   print($ability);
   }
 } catch(PDOException $e){
